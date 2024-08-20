@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Sync with YouTube</title>
+    <style>
+        #lyrics-container {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .lyrics-line {
+            font-size: 16px;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        .highlight {
+            color: #1DB954; /* Spotify-like green */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div sytle="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: column; margin-right: 20px">
+                <p>Youtube Link</p>
+                <div><input id="video-link" type="text" style="width: 500px; height: 40px;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-right: 20px">
+                <p>Source Language</p>
+                <div><input id="source-lang" type="text" style="width: 50px; height: 40px;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-right: 20px">
+                <p>Target Language</p>
+                <div><input id="target-lang" type="text" style="width: 50px; height: 40px;"></div>
+            </div>
+            <div style="margin-right: 20px">
+                <p>Submit Button</p>
+                <button id="submit-button" style="width: 100px; height: 40px;">Submit</button>
+            </div>
+        </div>
+        <div id="youtube-player"></div>
+        <div style="display: flex; flex-direction: row;">
+            <div id="src-lyrics-container"></div>
+            <div id="trns-lyrics-container"></div>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/ytSync.js"></script>
+</body>
+</html>
